@@ -9,7 +9,7 @@ $settings = array(
     'consumer_secret' => "WSd8Jaer2X7liMEfsxuFPd2cGZlqv0mqji5Higaz0ivmP2knuO"
 );
 
-if (isset($_GET['user'])) {
+if (isset($_GET['user']) && $_GET['user'] != '') {
   $user = $_GET['user'];
 }
 
@@ -55,6 +55,17 @@ $output = json_decode($twitter->setGetfield($getfield)
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-19557964-4', 'jacurtis.com');
+      ga('send', 'pageview');
+
+    </script>
   </head>
 
   <body>
@@ -85,7 +96,7 @@ $output = json_decode($twitter->setGetfield($getfield)
 
       <div class="jumbotron">
         <h1>Clean Tweets</h1>
-        <p class="lead">This is a work in progress, built by @_jacurtis wanting to experiment and build his own twitter app. To get started, input your information to view your tweets.</p>
+        <p class="lead">This is a work in progress, built by <a href="http://twitter.com/_jacurtis" title="Check out _Jacurtis on Twitter" class="tooltips"> @_jacurtis</a> wanting to experiment and build his own twitter app. To get started, input your information to view your tweets.</p>
         <!-- <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p> -->
       </div>
 
